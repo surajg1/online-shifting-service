@@ -1,0 +1,40 @@
+
+//admin
+
+create table admin(id int primary key,user_name varchar(30),password varchar(30));
+
+insert into admin values (1,'suraj','srj@1998');
+
+
+//customer
+
+create table customer(id SERIAL primary key,cust_name varchar(30),mobile NUMERIC(10),email text,address varchar(30),a_id int references admin(a_id) on delete cascade on update cascade);
+
+
+insert into customer values (DEFAULT,'suraj',9112864702,'surajgholap1234@gmail.com','pimple gurav pune 61',1);
+
+
+//Shifting Process
+
+ create table shifting_process(s_id SERIAL primary key,s_time varchar(30),origen varchar(30),destination varchar(30),item varchar(30),c_id SERIAL UNIQUE FOREIGN KEY REFERENCES customer(id),a_id int references admin(a_id) on delete cascade on update cascade);
+
+insert into shifting_process values (DEFAULT,'12:45','pune','mumbai','Car',DEFAULT,1);
+
+
+//Bill
+
+create table bill(b_id SERIAL primary key,type varchar(30),card_no varchar(20),c_id SERIAL UNIQUE REFERENCES customer(id),a_id int references admin(a_id) on delete cascade on update cascade);
+
+insert into bill values(DEFAULT,'online','35565421545',DEFAULT,1);
+
+//pay
+
+create table pay(p_id SERIAL primary key,amount money,card_no text,month varchar(20),year int,s_code int,c_id SERIAL UNIQUE REFERENCES customer(id),a_id int references admin(a_id) on delete cascade on update cascade);
+
+insert into pay values(DEFAULT,'147414741474','march',1998,133,DEFAULT,1)
+
+//Vehicle
+
+create table vehicle(vno SERIAl primary key,rto_no text,size varchar(10),r_date date ,d_name varchar(20)); 
+
+insert into vehicle values(DEFAULT,'mh 12 eq 706','large','12/07/1998','Sidhant Kale');

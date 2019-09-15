@@ -1,0 +1,184 @@
+	* {
+	    margin: 0px;
+	    padding: 0px;
+	}
+	
+	.bgimage {
+	    background-image: url('../img/limo1.jpg');
+	    background-size: 100% 110%;
+	    width: 100%;
+	    height: 100vh;
+	}
+	
+	.menu {
+	    width: 100%;
+	    height: 100px;
+	    background-color: rgba(0, 0, 0, 0.5);
+	}
+	
+	.leftmenu {
+	    width: 20%;
+	    line-height: 100px;
+	    float: left;
+	    /*	background-color: yellow;*/
+	}
+	
+	.leftmenu h4 {
+	    padding-left: 70px;
+	    font-weight: bold;
+	    color: white;
+	    font-size: 22px;
+	    font-family: Georgia, serif;
+	}
+	
+	.rightmenu {
+	    width: 70%;
+	    height: 100px;
+	    float: right;
+	    /*	background-color: red; */
+	}
+	
+	.rightmenu ul {
+	    margin-left: 550px;
+	}
+	
+	.rightmenu ul li {
+	    font-family: Georgia, serif;
+	    display: inline-block;
+	    list-style: none;
+	    font-size: 15px;
+	    color: white;
+	    font-weight: bold;
+	    line-height: 100px;
+	    margin-left: 40px;
+	    text-transform: uppercase;
+	}
+	
+	#fisrtlist {
+	    color: orange;
+	}
+	
+	.rightmenu ul li:hover {
+	    color: orange;
+	}
+	
+	.text {
+	    width: 100%;
+	    margin-top: 100px;
+	    text-transform: uppercase;
+	    text-align: center;
+	    color: rgb(202, 76, 26);
+	}
+	
+	.koko {
+	    width: 100%;
+	    margin-top: 100px;
+	    text-transform: uppercase;
+	    text-align: center;
+	    color: rgb(102, 26, 202);
+	}
+	
+	.text h4 {
+	    font-size: 14px;
+	    font-family: Georgia, serif;
+	}
+	
+	.text h1 {
+	    text-align: center;
+	    margin-top: 280px;
+	    font-size: 80px;
+	    font-family: 'Times New Roman';
+	    font-weight: 600px;
+	    margin: 14px 0px;
+	}
+	
+	.text h3 {
+	    font-size: 30px;
+	    margin-top: 130px;
+	    color: aliceblue;
+	    font-family: "montserrat", sans-serif;
+	}
+	
+	.container {
+	    text-align: center;
+	    margin-top: 10px;
+	}
+	
+	.btn {
+	    border: 2px solid #3498db;
+	    background: none;
+	    padding: 10px 20px;
+	    font-size: 26px;
+	    font-family: "montserrat";
+	    cursor: pointer;
+	    margin: 10px;
+	    transition: 0.8s;
+	    position: relative;
+	    overflow: hidden;
+	}
+	
+	.btn1,
+	.btn2 {
+	    color: #e9dfdf;
+	}
+	
+	.btn3,
+	.btn4 {
+	    color: rgb(230, 17, 17);
+	}
+	
+	.btn1:hover,
+	.btn2:hover {
+	    color: rgb(221, 21, 21);
+	}
+	
+	.btn3:hover,
+	.btn4:hover {
+	    color: #fbfbfb;
+	}
+	
+	.btn::before {
+	    content: "";
+	    position: absolute;
+	    left: 0;
+	    width: 100%;
+	    height: 0%;
+	    background: #3498db;
+	    z-index: -1;
+	    transition: 0.8s;
+	}
+	
+	.btn1::before,
+	.btn3::before {
+	    top: 0;
+	    border-radius: 0 0 50% 50%;
+	}
+	
+	.btn2::before,
+	.btn4::before {
+	    bottom: 0;
+	    border-radius: 50% 50% 0 0;
+	}
+	
+	.btn3::before,
+	.btn4::bef_ore {
+	    height: 180%;
+	}
+	
+	.btn1:hover::before,
+	.btn2:hover::before {
+	    height: 180%;
+	}
+	
+	.btn3:hover::before,
+	.btn4:hover::before {
+	    height: 0%;
+	}
+	
+	.header-class {
+	    marquee: right;
+	    size: 25;
+	    height: 130px;
+	    padding: 16px;
+	    font-family: verdana;
+	}
